@@ -1,0 +1,14 @@
+<a ui-sref="newCompany" class="btn-primary btn-lg nodecoration">Add New Company</a>
+<table class="table companytable">
+    <tr>
+        <td><h3>All Companies</h3></td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="Company in companies">
+        <td>{{Company.companyName}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewCompany({companyName:Company.companyName})">View</a>
+            <a class="btn btn-danger"  ng-click="deleteCompany(Company)">Delete</a>
+        </td>
+    </tr>
+</table>
